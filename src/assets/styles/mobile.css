@@ -1,0 +1,61 @@
+@media (max-width: 800px) {
+  .sidebar {
+    display: block;
+    position: static;
+    width: 100%;
+  }
+
+  .sidebar .links {
+    display: none;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar form {
+    width: 100%;
+  }
+  .navbar form > div {
+    width: 100%;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: 75%;
+    justify-content: center;
+  }
+  .cards > div {
+    width: 100%;
+  }
+
+  table thead {
+    display: none;
+  }
+  table tbody tr {
+    border: 1px solid #898989;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas:
+      "name ."
+      "email status"
+      "role .";
+  }
+
+  table tbody tr td:first-of-type {
+    grid-area: name;
+  }
+  table tbody tr td:nth-of-type(2) {
+    grid-area: email;
+  }
+  table tbody tr td:nth-of-type(3) {
+    grid-area: status;
+  }
+  table tbody tr td:nth-of-type(4) {
+    grid-area: role;
+  }
+}

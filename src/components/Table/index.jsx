@@ -5,30 +5,7 @@ import ProviderContext from "../../context/ProviderContext";
 import { MdArrowDropDown } from "react-icons/md";
 
 const Table = () => {
-  const { users, setUsers } = useContext(ProviderContext);
-
-  const filterTable = (column) => {
-    const sortedUsers = users.sort((firstUser, secondUser) => {
-      let first, second;
-      if (column == "name") {
-        first = firstUser.name.firstname.toLowerCase();
-        second = secondUser.name.firstname.toLowerCase();
-      } else {
-        first = firstUser[column].toLowerCase();
-        second = secondUser[column].toLowerCase();
-      }
-
-      if (first < second) {
-        return -1;
-      } else if (first > second) {
-        return 1;
-      } else {
-        return 0;
-      }
-    });
-
-    setUsers([...sortedUsers]);
-  };
+  const { filterTable } = useContext(ProviderContext);
 
   return (
     <div className="w-full bg-white my-4">

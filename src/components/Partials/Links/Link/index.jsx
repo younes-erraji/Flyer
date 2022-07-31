@@ -4,7 +4,6 @@ const Link = ({ content, Icon, bar }) => {
   return (
     <li>
       <a
-        href="#"
         className="text-base text-gray-900 font-normal rounded-lg flex justify-between items-center p-2 hover:bg-white group"
       >
         <div className="flex">
